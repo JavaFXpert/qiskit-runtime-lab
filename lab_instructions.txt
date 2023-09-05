@@ -54,6 +54,10 @@ Before you leave the IBM Quantum Composer, notice that the OpenQASM code that ca
 
 Awesome! Now we'll explore how to create and run quantum circuits using Python, Qiskit libraries, and Qiskit Runtime. ➤
 
+Take well deserved break!
+Please take a break, and then move forward to Understanding Qiskit Runtime, and accessing the IBM Quantum Lab below.
+
+Chapters
 Understanding Qiskit Runtime, and accessing the IBM Quantum Lab
 Before tackling the coding exercise coming up, go ahead and read the Introduction to Qiskit Runtime to get a feel for what it is and how it can make life easier for a quantum application developer. Then head over to the IBM Quantum Lab from the IBM Quantum platform by selecting Learning from the “nine dot” icon, and then selecting Lab from the IBM Quantum Learning page options. The IBM Quantum Lab is a cloud based environment in which you can develop Python programs that leverage Qiskit libraries as well as IBM Quantum systems and simulators.
 
@@ -61,7 +65,6 @@ Before tackling the coding exercise coming up, go ahead and read the Introductio
 
 When you're all set, let's walk through an IBM Quantum Lab-based tutorial about Qiskit Runtime and a primitive known as a Sampler. ➤
 
-Chapters
 Creating and running quantum circuits using Python, Qiskit libraries, and Qiskit Runtime
 From the File Browser pane on the left side of the IBM Quantum Lab, navigate to the tutorials folder and double-click on the how-to-getting-started-with-sampler.ipynb file. A Jupyter notebook entitled Get started with the Sampler primitive should appear. Go ahead and learn from that tutorial by running each notebook cell using the triangular run icon ▷ at the top of the notebook. When you feel prepared, get ready to write to write some Python code in the IBM Quantum Lab that leverages Qiskit, Qiskit Runtime and the Sampler primitive. ➤
 
