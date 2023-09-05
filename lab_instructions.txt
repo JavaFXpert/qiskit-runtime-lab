@@ -5,15 +5,15 @@ Introducing this hands-on lab
 This hands-on lab is a gentle introduction to quantum computing with Qiskit. This lab leverages some the latest innovations from IBM Quantum, such as Qiskit Runtime, and will help you get up to speed on the following topics and skills:
  
 
-Creating quantum circuits
+Creating quantum circuits:
 Visually, using the IBM Quantum Composer
 Procedurally, using Python and the Qiskit library
 Executing quantum circuits from the Composer, and by using Qiskit Runtime
-Leveraging the Qiskit Runtime Session and Sampler
+Leveraging Qiskit Runtime Sampler and Estimator primitives, and sessions
 Executing circuits in quantum simulators as well as on IBM Quantum computers
  
 
-Along the way, we'll introduce you to the brand new IBM Quantum platform, which is continually being augmented and improved. There are links to specific resources on the platform in which you'll implement the instructions of this hands-on lab as well as gain information helpful in carrying out those steps.
+Along the way, we'll introduce you to the brand new IBM Quantum platform, which is continually being augmented and improved. There are links to specific resources on the platform in which you'll implement the instructions of this hands-on lab as well as gain information helpful in carrying out those steps. You may find it helpful to open these links in separate tabs so that this syllabus remains open.
 
  
 
@@ -29,15 +29,15 @@ Let's continue the journey by creating a quantum circuit in the IBM Quantum Comp
 Creating a quantum circuit in the IBM Quantum Composer
 Go ahead and navigate to the IBM Quantum Composer from the IBM Quantum platform by selecting Learning from the “nine dot” icon, and then selecting Composer from the IBM Quantum Learning page options. When you are in the IBM Quantum Composer, perform the following steps:
 
-Open the Composer docs & tutorials slide out pane on the left
+Open the Composer docs & tutorials slide-out pane on the left
 Select the Create your first circuit walkthrough option, clicking Next to visit each step in the process.
 Select the Explore the latest updates option, clicking Next to learn about each new feature.
-Now create your own circuit, but instead of the ∣ϕ+⟩ Bell state shown in the walkthrough, create a ∣ψ−⟩​ Bell state, also called a singlet Bell state. You can find information about the four Bell states by searching the IBM Quantum Learning site. Hint: Strategically placed X and Z gates will turn the ∣ϕ+⟩ Bell state into a  ∣ψ−⟩​ Bell state.
+Now create your own circuit, but instead of the two-qubit ϕ+ Bell state shown in the walkthrough, create a two-qubit ψ−​ Bell state, also called a singlet Bell state. You can find information about the four Bell states by searching the IBM Quantum Learning site. Hint: Strategically placed X and Z gates will turn the ϕ+ Bell state into a  ψ− Bell state.
 The resultant Probabilities histogram visualization should indicate 50% probabilities of the 01 and 10 computational basis states being the result of measuring the quantum state.
-The resultant Statevector histogram and Q-sphere visualizations (after removing the measurement operations) should indicate that the amplitudes and probabilities of the 01 and 10 computational basis states are equal to each other, but in opposite phases.
+The resultant Statevector histogram and Q-sphere visualizations (after temporarily removing the measurement operations) should indicate that the amplitudes and probabilities of the 01 and 10 computational basis states are equal to each other, but in opposite phases.
  
 
-Nice work, and let's move on to executing your quantum circuit from the IBM Quantum Composer. ➤
+Nice work! Let's move on to executing your quantum circuit from the IBM Quantum Composer. ➤
 
 Executing your quantum circuit from the IBM Quantum Composer
 To execute your quantum circuit from the IBM Quantum Composer, perform the following steps:
@@ -66,15 +66,43 @@ Creating and running quantum circuits using Python, Qiskit libraries, and Qiskit
 From the File Browser pane on the left side of the IBM Quantum Lab, navigate to the tutorials folder and double-click on the how-to-getting-started-with-sampler.ipynb file. A Jupyter notebook entitled Get started with the Sampler primitive should appear. Go ahead and learn from that tutorial by running each notebook cell using the triangular run icon ▷ at the top of the notebook. When you feel prepared, get ready to write to write some Python code in the IBM Quantum Lab that leverages Qiskit, Qiskit Runtime and the Sampler primitive. ➤
 
 Developing a program that leverages Qiskit, Qiskit Runtime and the Sampler primitive
-Subtitle: Life is like a box of chocolates
+Subtitle: “Life is like a box of chocolates”
 
  
 
-Now it time to get your hands dirty with Python and Qiskit code. Your assignment, should you choose to accept it, will be to develop a program that samples one piece from a box that contains two chocolate candies. The circuit that chooses the piece of candy will be the singlet Bell state that you created earlier in this lab. Note: If you're bored with Bell states and want a challenge, create a W state that contains one qubit for each piece of chocolate from which it may choose one piece.
+Now it time to get your hands dirty with Python and Qiskit code. Your assignment, should you choose to accept it, will be to develop a program that samples one piece from a box that contains two chocolate candies. The circuit that chooses the piece of candy will be the singlet Bell state that you created earlier in this lab. Note: If you're bored with Bell states and want a bigger challenge, create a W state that contains one qubit for each piece of chocolate from which it may choose one piece.
 
  
 
-TODO: Left off here
+To get started on this assignment, perform the following steps:
 
-Helpful resources about Qiskit Runtime
-Qiskit Runtime - Coding with Qiskit Season 3 (on YouTube Qiskit channel)
+Navigate to the Lab files folder and create a new folder (using the New Folder icon) named qiskit-runtime-lab
+Create a Jupyter notebook in that folder by clicking the New file + button and selecting Python 3 (ipykernel) from the Notebook section of the Launcher pane.
+Right-click on the Untitled.ipynb file and Rename it to something like sampler-lab-exercise.ipynb
+Leverage the Using Qiskit Runtime Sampler section of the how-to-getting-started-with-sampler.ipynb notebook as a guide for coding this assignment. Adding a histogram visualization of the quasi-distribution would be a nice touch, so here's a code snippet you could add to the 4. Invoke the Sampler and get results section if you'd like:
+ 
+
+from qiskit.visualization import plot_histogram
+plot_histogram(job.result().quasi_dists[0].binary_probabilities())
+
+ 
+
+Good luck, and please ask for help at any time!
+
+Leveraging the Qiskit Runtime Session and the Estimator Primitive
+From the File Browser pane on the left side of the IBM Quantum Lab, navigate to the tutorials folder and double-click on the how-to-getting-started-with-estimator.ipynb file. A Jupyter notebook entitled Get started with the Estimator primitive should appear. Go ahead and learn from that tutorial by running each notebook cell using the triangular run icon ▷ at the top of the notebook. When you're ready, we'll look at an example program that leverages Session and Estimator to optimize a box of chocolates. ➤
+
+Examining a program that leverages Qiskit Runtime Session and the Estimator primitive
+Subtitle: “You never know what you're gonna get”
+
+ 
+
+Continuing with our box of chocolates theme, please examine a simple program that leverages Qiskit Runtime and the Variational Quantum Eigensolver (VQE) to assemble a box of chocolates that hopefully meets our expectations. 
+
+ 
+
+This program draws upon code from an example that experimental physicist & IBM Quantum researcher Nick Bronn created for the Coding with Qiskit Runtime video series, specifically in Episode 05 Primitives & Sessions.
+
+Thanks for playing along!
+We hope you enjoyed this gentle introduction to quantum computing with Qiskit. Please don't hesitate to reach out if you have any questions.
+
