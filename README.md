@@ -38,7 +38,7 @@ Go ahead and navigate to the IBM Quantum Composer from the [IBM Quantum](https:/
 1. Open the **Composer docs & tutorials** slide-out pane on the left
 2. Select the **Create your first circuit walkthrough** option, clicking **Next** to visit each step in the process.
 3. Select the **Explore the latest updates** option, clicking **Next** to learn about each new feature.
-4. Now create your own circuit, but instead of the two-qubit ***ϕ*****+** Bell state shown in the walkthrough, create a two-qubit ***ψ*****−** Bell state, also called a *singlet Bell state*. You can find information about the four Bell states by searching the IBM Quantum Learning site. Hint: Strategically placed ***X*** and ***Z*** gates will turn the ***ϕ*****+** Bell state into a  ***ψ*****−** Bell state.
+4. Now create your own circuit, but instead of the two-qubit **ϕ+** Bell state shown in the walkthrough, create a two-qubit **ψ−** Bell state, also called a *singlet Bell state*. You can find information about the four Bell states by searching the IBM Quantum Learning site. Hint: Strategically placed ***X*** and ***Z*** gates will turn the **ϕ+** Bell state into a  **ψ−** Bell state.
 5. The resultant **Probabilities** histogram visualization should indicate 50% probabilities of the **01** and **10** *computational basis states* being the result of measuring the quantum state.
 6. The resultant **Statevector** histogram and **Q-sphere** visualizations (after ***temporarily*** removing the measurement operations) should indicate that the amplitudes and probabilities of the **01** and **10** *computational basis states* are equal to each other, but in opposite *phases*.
 
