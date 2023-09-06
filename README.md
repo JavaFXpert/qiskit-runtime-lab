@@ -14,7 +14,7 @@ This hands-on lab is a gentle introduction to quantum computing with Qiskit. Thi
   - Visually, using the IBM Quantum Composer
   - Procedurally, using Python and the Qiskit library
 - Executing quantum circuits from the Composer, and by using Qiskit Runtime
-- Leveraging Qiskit Runtime Sampler and Estimator primitives, an Runtime sessions
+- Leveraging Qiskit Runtime Sampler and Estimator primitives, and Runtime sessions
 - Executing circuits in quantum simulators as well as on IBM Quantum computers
 
 Along the way, we'll introduce you to the brand new IBM Quantum platform, which is continually being augmented and improved. There are links to specific resources on the platform in which you'll implement the instructions of this hands-on lab as well as gain information helpful in carrying out those steps. ***Note: You may find it helpful to open these links in separate tabs so that this syllabus remains open.***
